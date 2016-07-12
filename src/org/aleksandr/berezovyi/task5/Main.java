@@ -4,7 +4,7 @@ package org.aleksandr.berezovyi.task5;
  * Created by pepsik on 7/12/2016.
  */
 public class Main {
-    public int allDays = 0;
+    private int allDays = 0;
     private int weekday = 0;
 
     public void setNYday(int weekday) {
@@ -27,17 +27,17 @@ public class Main {
     }
 
     public int getWeekday() { // этот метод я не успел написать
-        if ((allDays + 3) % 7 == 0)
+        if ((allDays + weekday) % 7 == 0)
             return 1;
         else
-            return (allDays + 3) % 7;
+            return (allDays + weekday) % 7;
     }
 
     public static void main(String[] args) {
         org.aleksandr.berezovyi.task5.Main task = new Main();
         task.setNYday(5);
         task.setMonth(7);
-        task.setDay(12);
+        task.setDay(20);
         System.out.println(task.getWeekday());
     }
 }
